@@ -1,0 +1,98 @@
+name: 🎉 Success Story
+description: Share your Zero2Hero success using this blueprint
+title: "[SUCCESS] "
+labels: ["success-story", "community"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for sharing your Zero2Hero success story! This helps validate and improve the blueprint for the entire community.
+
+  - type: input
+    id: project-name
+    attributes:
+      label: Project Name
+      description: What's the name of your project?
+      placeholder: e.g., "MyApp.io", "ShopTracker", "InvoiceGenerator"
+    validations:
+      required: true
+
+  - type: textarea
+    id: project-description
+    attributes:
+      label: Project Description
+      description: Brief description of your project and its complexity
+      placeholder: Describe what you built, the technology stack, and key features
+    validations:
+      required: true
+
+  - type: dropdown
+    id: success-rate
+    attributes:
+      label: Implementation Success Rate
+      description: How many Zero2Hero implementations succeeded on first try?
+      options:
+        - "4/4 (100%)"
+        - "3/4 (75%)"
+        - "2/4 (50%)"
+        - "1/4 (25%)"
+        - "Other (explain in details)"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: blueprint-sections
+    attributes:
+      label: Which Blueprint Sections Did You Use?
+      description: Check all sections of the blueprint you followed
+      options:
+        - label: "SUCCESS_BLUEPRINT.md - Overall workflow"
+        - label: "ZERO2HERO_COMMANDS.md - Exact command patterns"
+        - label: "IMPLEMENTATION_STRATEGY.md - Incremental approach"
+        - label: "INTEGRATION_GUIDE.md - Zero2Hero → Cursor workflow"
+        - label: "USER_STORIES.md - Specification breakdown"
+
+  - type: textarea
+    id: commands-used
+    attributes:
+      label: Zero2Hero Commands That Worked
+      description: Share the specific commands that achieved success for your project
+      placeholder: |
+        /spec MyProject - [description]
+        /impl MyProject [component] with [details]...
+      render: bash
+
+  - type: textarea
+    id: success-metrics
+    attributes:
+      label: Success Metrics
+      description: Quantify your success (time saved, quality achieved, etc.)
+      placeholder: |
+        - Development time: X hours (vs Y traditional)
+        - Implementation success rate: X/Y
+        - Code quality: X/5 stars
+        - Any other metrics...
+
+  - type: textarea
+    id: lessons-learned
+    attributes:
+      label: Lessons Learned
+      description: What insights or optimizations did you discover?
+      placeholder: Share any workflow improvements, command optimizations, or insights that could help others
+
+  - type: textarea
+    id: improvements
+    attributes:
+      label: Suggested Blueprint Improvements
+      description: How could this blueprint be improved based on your experience?
+      placeholder: Any suggestions for improving the documentation, command patterns, or workflow
+
+  - type: checkboxes
+    id: sharing-permission
+    attributes:
+      label: Sharing Permission
+      description: Can we feature your success story to help the community?
+      options:
+        - label: "Yes, you can feature this success story in community showcases"
+        - label: "Yes, you can use this as a case study for improving the blueprint"
+        - label: "Yes, you can share metrics and insights (anonymously if preferred)"

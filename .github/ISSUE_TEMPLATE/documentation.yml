@@ -1,0 +1,127 @@
+name: 📚 Documentation Issue
+description: Report documentation errors or request clarifications
+title: "[DOCS] "
+labels: ["documentation", "clarity"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us improve the documentation! Report errors, unclear sections, or missing information.
+
+  - type: dropdown
+    id: doc-section
+    attributes:
+      label: Documentation Section
+      description: Which document or section needs improvement?
+      options:
+        - "README.md"
+        - "SUCCESS_BLUEPRINT.md"
+        - "ZERO2HERO_COMMANDS.md"
+        - "IMPLEMENTATION_STRATEGY.md"
+        - "INTEGRATION_GUIDE.md"
+        - "DEVELOPMENT_LOG.md"
+        - "USER_STORIES.md"
+        - "Zero2Hero Outputs (examples)"
+        - "CONTRIBUTING.md"
+        - "Other"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Issue Type
+      description: What kind of documentation issue is this?
+      options:
+        - "Unclear instructions"
+        - "Missing information"
+        - "Incorrect information"
+        - "Broken links or references"
+        - "Formatting issues"
+        - "Typos or grammar"
+        - "Missing examples"
+        - "Outdated content"
+    validations:
+      required: true
+
+  - type: textarea
+    id: specific-location
+    attributes:
+      label: Specific Location
+      description: Where exactly is the issue? (section, heading, line number, etc.)
+      placeholder: |
+        e.g., "SUCCESS_BLUEPRINT.md, section 'Core Success Principles', first paragraph"
+        or "Line 45 in ZERO2HERO_COMMANDS.md"
+
+  - type: textarea
+    id: current-content
+    attributes:
+      label: Current Content
+      description: Quote the current text that's problematic (if applicable)
+      placeholder: Copy/paste the current text that needs improvement
+
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: Issue Description
+      description: Explain what's unclear, incorrect, or missing
+      placeholder: |
+        Describe the problem:
+        - What's confusing or wrong?
+        - What information is missing?
+        - How does this affect following the blueprint?
+
+  - type: textarea
+    id: suggested-improvement
+    attributes:
+      label: Suggested Improvement
+      description: How would you improve this section?
+      placeholder: |
+        Suggest specific improvements:
+        - Rewording for clarity
+        - Additional examples
+        - Missing steps
+        - Better organization
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What were you trying to achieve when you encountered this issue?
+      placeholder: |
+        e.g., "Following the blueprint for a React project", 
+        "Trying to understand the incremental strategy", 
+        "Setting up Zero2Hero commands for my use case"
+
+  - type: dropdown
+    id: experience-level
+    attributes:
+      label: Your Experience Level
+      description: This helps us understand how to improve clarity
+      options:
+        - "New to Zero2Hero"
+        - "Some Zero2Hero experience"
+        - "Experienced with Zero2Hero"
+        - "Expert level"
+
+  - type: checkboxes
+    id: impact
+    attributes:
+      label: Impact Assessment
+      description: How does this documentation issue affect blueprint usage?
+      options:
+        - label: "Blocks following the workflow completely"
+        - label: "Makes the workflow difficult to follow"
+        - label: "Causes confusion but workarounds exist"
+        - label: "Minor issue, doesn't significantly impact usage"
+
+  - type: checkboxes
+    id: help-offer
+    attributes:
+      label: Contribution Offer
+      description: Can you help improve this documentation?
+      options:
+        - label: "I can submit a pull request with the fix"
+        - label: "I can provide more detailed suggestions"
+        - label: "I can help test the improved documentation"
+        - label: "I can provide additional examples"

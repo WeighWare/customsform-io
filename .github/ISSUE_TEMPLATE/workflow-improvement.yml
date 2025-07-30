@@ -1,0 +1,114 @@
+name: 🔧 Workflow Improvement
+description: Suggest improvements to the Zero2Hero workflow
+title: "[IMPROVEMENT] "
+labels: ["enhancement", "workflow"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us improve the Zero2Hero success blueprint! Share your ideas for making the workflow even more effective.
+
+  - type: dropdown
+    id: improvement-category
+    attributes:
+      label: Improvement Category
+      description: What aspect of the workflow would you like to improve?
+      options:
+        - "Command Patterns"
+        - "Implementation Strategy"
+        - "Integration Process"
+        - "Documentation Clarity"
+        - "Error Recovery"
+        - "Performance Optimization"
+        - "Other"
+    validations:
+      required: true
+
+  - type: input
+    id: current-issue
+    attributes:
+      label: Current Challenge
+      description: What specific challenge or limitation did you encounter?
+      placeholder: e.g., "Commands timeout on complex projects", "Integration unclear for Vue.js"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-approach
+    attributes:
+      label: Current Blueprint Approach
+      description: How does the current blueprint handle this scenario?
+      placeholder: Describe the current guidance or command patterns for this situation
+
+  - type: textarea
+    id: proposed-improvement
+    attributes:
+      label: Proposed Improvement
+      description: What specific improvement do you suggest?
+      placeholder: |
+        Describe your suggested improvement in detail:
+        - What should change?
+        - How would it work?
+        - What would be different?
+
+  - type: textarea
+    id: improved-commands
+    attributes:
+      label: Improved Command Patterns (if applicable)
+      description: Share specific Zero2Hero commands that work better
+      placeholder: |
+        /spec [improved pattern]
+        /impl [improved pattern] with [enhancements]...
+      render: bash
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or Testing
+      description: Have you tested this improvement? What were the results?
+      placeholder: |
+        - Tested on: [project type/complexity]
+        - Results: [success rate, time savings, quality improvements]
+        - Comparison: [vs current blueprint approach]
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Expected Impact
+      description: How would this improvement benefit the community?
+      placeholder: |
+        - Success rate improvement: X%
+        - Time savings: X hours/project
+        - Expanded use cases: [project types]
+        - Other benefits...
+
+  - type: checkboxes
+    id: affected-sections
+    attributes:
+      label: Affected Documentation Sections
+      description: Which parts of the blueprint would need updates?
+      options:
+        - label: "SUCCESS_BLUEPRINT.md"
+        - label: "ZERO2HERO_COMMANDS.md"
+        - label: "IMPLEMENTATION_STRATEGY.md"
+        - label: "INTEGRATION_GUIDE.md"
+        - label: "Zero2Hero Output Examples"
+        - label: "CI/CD Workflow"
+
+  - type: input
+    id: implementation-effort
+    attributes:
+      label: Implementation Effort
+      description: How much work would this improvement require?
+      placeholder: e.g., "Documentation update only", "Minor workflow changes", "Major restructure"
+
+  - type: checkboxes
+    id: contribution-offer
+    attributes:
+      label: Contribution Offer
+      description: Are you willing to help implement this improvement?
+      options:
+        - label: "I can help implement this improvement"
+        - label: "I can provide additional testing and validation"
+        - label: "I can help update the documentation"
+        - label: "I can create examples and tutorials"

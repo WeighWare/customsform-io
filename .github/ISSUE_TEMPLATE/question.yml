@@ -1,0 +1,124 @@
+name: ❓ Zero2Hero Usage Question
+description: Get help using the Zero2Hero success blueprint
+title: "[QUESTION] "
+labels: ["question", "help-wanted"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask questions about using the Zero2Hero success blueprint! The community is here to help you achieve implementation success.
+
+  - type: dropdown
+    id: question-category
+    attributes:
+      label: Question Category
+      description: What aspect of the blueprint do you need help with?
+      options:
+        - "Getting Started"
+        - "Command Patterns"
+        - "Implementation Strategy"
+        - "Integration Process"
+        - "Error Recovery"
+        - "Project-Specific Guidance"
+        - "Best Practices"
+        - "Workflow Optimization"
+    validations:
+      required: true
+
+  - type: textarea
+    id: your-question
+    attributes:
+      label: Your Question
+      description: What specific help do you need?
+      placeholder: Ask your question clearly and provide as much context as possible
+    validations:
+      required: true
+
+  - type: textarea
+    id: project-context
+    attributes:
+      label: Project Context
+      description: Tell us about your project to help provide better guidance
+      placeholder: |
+        - Project type: (web app, mobile app, API, etc.)
+        - Technology stack: (React, Vue, Next.js, etc.)
+        - Complexity level: (simple, medium, complex)
+        - Specific requirements or constraints
+
+  - type: textarea
+    id: what-tried
+    attributes:
+      label: What Have You Tried?
+      description: What approaches have you already attempted?
+      placeholder: |
+        - Specific Zero2Hero commands you've used
+        - Results or errors you encountered
+        - Parts of the blueprint you've followed
+        - Any workarounds you've attempted
+
+  - type: textarea
+    id: current-challenge
+    attributes:
+      label: Current Challenge
+    attributes:
+      description: What specific obstacle are you facing?
+      placeholder: |
+        e.g., "Commands timing out on complex features",
+        "Not sure how to structure my project specification",
+        "Integration with my development setup isn't working"
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency Level
+      description: How urgently do you need help?
+      options:
+        - "Learning/exploring - no rush"
+        - "Working on project - moderate urgency"
+        - "Blocked on important project - high urgency"
+        - "Production deadline - urgent"
+
+  - type: dropdown
+    id: experience-level
+    attributes:
+      label: Your Zero2Hero Experience
+      description: How familiar are you with Zero2Hero?
+      options:
+        - "Complete beginner"
+        - "Used a few times"
+        - "Regular user"
+        - "Experienced user"
+
+  - type: checkboxes
+    id: blueprint-sections-read
+    attributes:
+      label: Blueprint Sections You've Read
+      description: Which parts of the blueprint have you already reviewed?
+      options:
+        - label: "README.md - Overview"
+        - label: "SUCCESS_BLUEPRINT.md - Main workflow guide"
+        - label: "ZERO2HERO_COMMANDS.md - Command patterns"
+        - label: "IMPLEMENTATION_STRATEGY.md - Incremental approach"
+        - label: "INTEGRATION_GUIDE.md - Development integration"
+        - label: "Zero2Hero Output Examples"
+
+  - type: textarea
+    id: expected-outcome
+    attributes:
+      label: Expected Outcome
+      description: What result are you hoping to achieve?
+      placeholder: |
+        e.g., "Successfully implement my project features with 90%+ success rate",
+        "Understand how to structure complex Zero2Hero commands",
+        "Set up efficient workflow for my team"
+
+  - type: checkboxes
+    id: follow-up
+    attributes:
+      label: Follow-up Preferences
+      description: How would you like to engage after getting help?
+      options:
+        - label: "I'll share my success story if this helps"
+        - label: "I'm willing to help others with similar questions"
+        - label: "I can contribute improvements based on what I learn"
+        - label: "I'd like to participate in community discussions"
